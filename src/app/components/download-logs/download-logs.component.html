@@ -1,0 +1,23 @@
+<!-- download-logs.component.html -->
+<div class="download-logs-container">
+    <!-- Buton pentru a încărca logurile de descărcare -->
+    <button (click)="loadDownloadLogs()">Load Download Logs</button>
+  
+    <!-- Listă pentru a afișa logurile de descărcare -->
+    <ul *ngIf="downloadLogs.length > 0">
+      <li *ngFor="let log of downloadLogs">
+        <div class="log-item">
+          <p><strong>Object Name:</strong> {{ log.objectName }}</p>
+          <p><strong>Downloaded At:</strong> {{ log.downloadTimestamp }}</p>
+          <p><strong>User ID:</strong> {{ log.userId }}</p>
+          <p><strong>Download ID:</strong> {{ log.downloadId }}</p>
+          <!-- Buton pentru descărcarea fișierului -->
+          <button (click)="downloadFile(log.objectName)">Download</button>
+        </div>
+      </li>
+    </ul>
+  
+    <!-- Mesaj dacă nu sunt loguri de afișat -->
+    <p *ngIf="downloadLogs.length === 0">No download logs available.</p>
+  </div>
+  

@@ -1,0 +1,10 @@
+<!-- src/app/components/confirm-dialog/confirm-dialog.component.html -->
+<h2 mat-dialog-title>Confirm download</h2>
+<mat-dialog-content>
+  <p>Are you sure you want to download this document?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button style="cursor:pointer; background-color: #ffffff; color: #d21919; border: 1px solid #d21919; margin-right: 8px; border-radius: 4px; transition: background-color 0.3s, color 0.3s, border 0.3s; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);" mat-button (click)="onNoClick()">No</button>
+  <button style="cursor:pointer; background-color: #28a745; color: #ffffff; border: 1px solid #28a745; margin-right: 8px; border-radius: 4px; transition: background-color 0.3s, color 0.3s, border 0.3s; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);" mat-button color="primary" (click)="onYesClick()">Yes</button>
+</mat-dialog-actions>
+

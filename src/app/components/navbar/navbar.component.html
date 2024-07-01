@@ -1,0 +1,50 @@
+<nav class="navbar">
+  <div class="left-section">
+    <span class="search-title">minIO Bucket Exercise</span>
+  </div>
+  <div class="center-section">
+    <form class="search-form" (submit)="onSearch(searchQuery)">
+      <input type="text" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Search objects">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  <div class="right-section">
+    <div class="upload-container">
+      <label class="upload-button">
+        Upload File
+        <input type="file" (change)="onFileSelected($event)">
+      </label>
+    </div>
+     
+  </div>
+  
+</nav>
+<div class="search-header">
+  <h2 class="search-results-title" *ngIf="searchQuery.length > 0" [ngClass]="{ 'fade-in': searchQuery.length > 0 }">Searching: "{{ searchQuery }}"</h2>
+</div>
+<div class="header-row">
+  <div class="header-column name-column">
+    <span>Name</span>
+    <button type="button" class="sort-button" (click)="sortObjects('asc')">▲</button>
+    <button type="button" class="sort-button" (click)="sortObjects('desc')">▼</button>
+  </div>
+  <div class="header-column">Last Modified</div>
+  <div class="header-column">Size</div>
+  <div class="header-column">Download</div>
+</div>
+
+<div class="search-results" [ngClass]="{ 'fade-in': filteredObjects.length > 0 }">
+  <ul>
+    <li *ngFor="let object of filteredObjects">
+      <div class="result-row">
+        <div class="result-column name-column">{{ object }}</div>
+        <div class="result-column">-</div>
+        <div class="result-column">-</div>
+        <div class="result-column"><button class="download-button" (click)="onDownload(object)">Download</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <p *ngIf="filteredObjects.length === 0" class="no-results">No results found.</p>
+</div>
+

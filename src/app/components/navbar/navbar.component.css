@@ -1,0 +1,247 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  transition: background 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.left-section {
+  flex: 1; 
+}
+
+.center-section {
+  flex: 2; 
+  text-align: center;
+}
+
+.right-section {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-end; 
+}
+
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #0093E9;
+   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #004080;
+  }
+.upload-container {
+  display: flex;
+  align-items: center;
+  height:20px;
+
+}
+
+.upload-button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  height:20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #218838;
+}
+
+.upload-button input[type="file"] {
+  display: none;
+  height:20px;
+  text-align: center;
+
+}
+
+  
+  .header-row {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .header-column {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.result-row {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+  }
+  
+  .result-row:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px); 
+  }
+  
+  .result-column {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .name-column {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sort-button {
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none; 
+    outline: none; 
+  }
+  
+  .download-button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background-color: #218838;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .no-results {
+    color: #0056b3;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .search-header {
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    text-align: left;
+  }
+  
+  .search-results-title {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  .header-row {
+    display: flex;
+    align-items: center;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);  ; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .search-title {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    background-image: linear-gradient(to right, #030000, #011ea1); /* gradient de la albastru la cyan */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: background-position 0.3s ease, color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    cursor: pointer;
+
+  }
+  
+  .search-title:hover,
+  .search-title:focus {
+    outline: none; 
+  }
+
+
+
+
+  
+  
+  
+  
