@@ -132,13 +132,15 @@ export class NavbarComponent implements OnInit {
   onFileSelected(event: any): void {
     const file: File = event.target.files[0];
     if (file) {
-      window.location.reload()
+      
       this.minioObjectsService.uploadObject(file).subscribe(
         (response) => {
           console.log('File uploaded successfully', response);
+          window.location.reload()
          },
         (error) => {
           console.error('Error uploading file', error);
+          window.location.reload()
           // Handle error response if needed
         });
     }
